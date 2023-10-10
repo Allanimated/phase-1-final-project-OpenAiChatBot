@@ -44,8 +44,6 @@ h2 {
     
 }
 
-
-
 .textbox {
     position: sticky;
     bottom: 0;
@@ -55,4 +53,20 @@ h2 {
     flex-direction: row;
     column-gap: 10px;
     background-color:#2b7a78;
+}
+
+
+div.card-deck img{
+    width: 300px;
+    height: 400px;
+    border-radius: 10px;
+}
+
+div.card-deck {
+    display: flex;
+    flex-direction: row;
+    column-gap: 20px;
+    padding: 20px;
+    justify-content: space-evenly;
+    height: 500px;
 }
