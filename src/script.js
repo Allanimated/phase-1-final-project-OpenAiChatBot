@@ -18,7 +18,7 @@ function createChatDiv(message, className) {
 }
 
 function generateResponse(message, generatingResponse) {
-    const API_KEY = "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"
+    const API_KEY = ""
     const responseElement = generatingResponse.querySelector('p')
     const configurationObject = {
         method: "POST",
@@ -73,7 +73,7 @@ function handleChat() {
 //image app functions
 
 function generateImages(message) {
-    const API_KEY = "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"
+    const API_KEY = ""
     const configurationObject = {
         method: "POST",
         headers: {
