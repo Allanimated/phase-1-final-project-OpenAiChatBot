@@ -33,9 +33,10 @@
     <!--Image generation section-->
     <section class="imageapp">
         <header>
-            <h2>ImageGenerator</h2>
+            <h2><span><i class="bi bi-card-image"></i></span>ImageGenerator</h2>
         </header>
         <div class="card-deck">
+            <!--Images go here-->
         </div>
         <div class="textbox">
             <textarea id="imagePrompt" class="form-control" placeholder="Type your message here.."></textarea>
@@ -44,7 +45,25 @@
     </section>
     <!--Audio section-->
     <section class="audioapp">
-        <h1>audioapp</h1>
+        <header>
+            <h2><span><i class="bi bi-mic-fill"></i></span>Audio Transcription</h2>
+        </header>
+        <div class="card">
+            <h3><span>Speech to text</span></h3>
+            <div class="audio">
+                <p>Upload Audio file here</p>
+                <form id="audiouploadform">
+                    <input type="file" accept="audio/*" name="audio" id="audio"><br><br>
+                    <button class="btn btn-outline-warning btn-lg" type="submit" id="startlistening"><span><i class="bi bi-soundwave"></i></span>Start Listening</button>
+                </form><br>
+                <em>(formats: flac, mp3, mp4, mpeg, mpga, m4a, ogg, wav, or webm.)</em>
+            </div>
+            <div class="card-body">
+                <h5 class="card-title">Results</h5>
+                <p class="card-text" id="transcript">Transcription goes here..</p>
+            </div>
+            
+        </div>
     </section>
 </body>
 </html>
