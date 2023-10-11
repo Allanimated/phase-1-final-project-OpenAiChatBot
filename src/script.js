@@ -1,3 +1,6 @@
+//global variables
+const API_KEY = ""
+
 function createChatDiv(message, className) {
     const chatDiv = document.createElement('div')
     chatDiv.classList.add(className)
@@ -18,7 +21,6 @@ function createChatDiv(message, className) {
 }
 
 function generateResponse(message, generatingResponse) {
-    const API_KEY = ""
     const responseElement = generatingResponse.querySelector('p')
     const configurationObject = {
         method: "POST",
@@ -73,7 +75,6 @@ function handleChat() {
 //image app functions
 
 function generateImages(message) {
-    const API_KEY = ""
     const configurationObject = {
         method: "POST",
         headers: {
@@ -128,6 +129,59 @@ function handleImage() {
    
 }
 
+/*audio functions*/
+
+//communicate to whisper API
+function generateAudioTranscription(audio) {
+    console.log(audio);
+    
+    const formData = new FormData();
+    formData.append('model', 'whisper-1'); // Add the "model" parameter
+    formData.append('file', audio);
+    formData.append("language", "en")
+
+
+    const configurationObject = {
+        method: "POST",
+        headers: {
+            'Authorization': `Bearer ${API_KEY}`,
+        },
+        body: formData,
+    }
+
+    fetch("https://api.openai.com/v1/audio/transcriptions", configurationObject)
+    .then(resp => resp.json())
+    .then(transcription => {
+        const transcript = document.querySelector('#transcript')
+        transcript.textContent = transcription.text; 
+    })
+    .catch(error => {
+        console.log(error.message);
+    })
+}
+
+
+//get user input
+function receiveUserAudio(e) {
+    //prevent default behaviour
+    e.preventDefault();
+    //get audio
+    const audioElement = document.querySelector('#audio')
+    const audio = audioElement.files[0]
+    //check for audio input
+    if (!audio) {
+        alert('please choose an audio file')
+        return;
+    }
+    // check if the size is less than 25MB
+    if (audio.size > 25 * 1024 * 1024) {
+        alert("Please upload an audio file less than 25MB");
+        return;
+    }
+    //pass audio to fetch function
+    generateAudioTranscription(audio);
+}
+
 
 document.addEventListener('DOMContentLoaded', (e) => {
     //display
@@ -135,15 +189,18 @@ document.addEventListener('DOMContentLoaded', (e) => {
     chatBotSection.style.display = "none"
     const homePageSection = document.querySelector(".homepage");
     homePageSection.style.display = "none"
-    const audioBotSection = document.querySelector(".audioapp");
-    audioBotSection.style.display = "none"
+    const imageappSection = document.querySelector(".imageapp");
+    imageappSection.style.display = "none"
     
-    //app buttons
+    //app elements
     const sendBtn = document.querySelector('#sendbtn');
     const imageBtn = document.querySelector('#imagebtn');
-    //button events
+    const audiouploadform = document.querySelector('#audiouploadform');
+    // events
     sendBtn.addEventListener('click', handleChat);
     imageBtn.addEventListener('click', handleImage);
+    audiouploadform.addEventListener('submit', receiveUserAudio)
+
 })
 
  
