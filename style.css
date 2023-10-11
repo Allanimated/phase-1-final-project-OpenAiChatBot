@@ -70,3 +70,24 @@ div.card-deck {
     justify-content: space-evenly;
     height: 500px;
 }
+
+div.card {
+    display: block;
+    margin: auto;
+    width: 400px;
+    height: fit-content;
+    padding: 10px;
+}
+
+div.audio {
+
+    display: block;
+    margin: auto;
+    border-style: solid;
+    height: 250px;
+    width: 350px;
+    border-radius: 15px;
+    text-align: center;
+    padding: 15px;
+    border-color: #2b7a78;
+}
