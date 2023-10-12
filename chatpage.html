@@ -9,15 +9,47 @@
     <title>ChatBotApp</title>
     <script src="src/script.js"></script>
     <link rel="stylesheet" href="style.css">
+    <!--Google fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Young+Serif&display=swap" rel="stylesheet">
 </head>
 <body>
+    <!--HomepageSection-->
     <section class="homepage">
-        <h1>Welcome</h1>
+        <div class="home">
+            <div class="navbar">
+                <img src="images/logo.jpg" alt="logo">
+            </div>
+            <div class="row">
+                <div class="col">
+                    <h1>Halo AI</h1>
+                    <p class="slogan">IMAGINE * BELIEVE * CREATE</p>
+                </div>
+                <div class="col">
+                    <div class="homecards chatty">
+                        <h4>CHATTY</h4>
+                        <button class="btn btn-outline-warning btn-md" style="margin-top: 50px;" value="chatty"><span><i class="bi bi-robot"></i></span>Chat</button>
+                    </div>
+                    <div class="homecards mega">
+                        <h4>MEGA</h4>
+                        <button class="btn btn-outline-warning btn-md" style="margin-top: 50px;" value="mega"><span><i class="bi bi-card-image"></i>Capture</span></button>
+                    </div>
+                    <div class="homecards hermes">
+                        <h4>HERMES</h4>
+                        <button class="btn btn-outline-warning btn-md" style="margin-top: 50px;" value="hermes"><span><i class="bi bi-soundwave"></i>Listen</span></button>
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
     <!--Chat Bot section-->
     <section class="chatbotapp">
         <header>
-            <h2><span><i class="bi bi-robot"></i></span> ChatBotApp</h2>
+            <div class="navbar">
+                <img src="images/logo.jpg" alt="logo">
+                <h2><span><i class="bi bi-robot"></i></span> ChatBotApp</h2>
+            </div>
         </header>
         <div class="chatbox">
             <div class="botmessage">
@@ -27,13 +59,16 @@
         </div>
         <div class="textbox">
             <textarea id="textarea" class="form-control" placeholder="Type your message here.."></textarea>
-            <button class="btn btn-outline-secondary" id="sendbtn"><i class="bi bi-send"></i></button>
+            <button class="btn btn-outline-warning" id="sendbtn"><i class="bi bi-send"></i></button>
         </div>
     </section>
     <!--Image generation section-->
     <section class="imageapp">
         <header>
-            <h2><span><i class="bi bi-card-image"></i></span>ImageGenerator</h2>
+            <div class="navbar">
+                <img src="images/logo.jpg" alt="logo">
+                <h2><span><i class="bi bi-card-image"></i></span>ImageGenerator</h2>
+            </div>
         </header>
         <div class="card-deck">
             <!--Images go here-->
@@ -46,7 +81,10 @@
     <!--Audio section-->
     <section class="audioapp">
         <header>
-            <h2><span><i class="bi bi-mic-fill"></i></span>Audio Transcription</h2>
+            <div class="navbar">
+                <img src="images/logo.jpg" alt="logo">
+                <h2><span><i class="bi bi-mic-fill"></i></span>Audio Transcription</h2>
+            </div>
         </header>
         <div class="card">
             <h3><span>Speech to text</span></h3>
