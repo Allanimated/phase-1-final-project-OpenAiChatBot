@@ -174,7 +174,7 @@ function receiveUserAudio(e) {
         return;
     }
     // check if the size is less than 25MB
-    if (audio.size > 25 * 1024 * 1024) {
+    if (audio.size > 25 * 1024 **2) {
         alert("Please upload an audio file less than 25MB");
         return;
     }
@@ -182,24 +182,61 @@ function receiveUserAudio(e) {
     generateAudioTranscription(audio);
 }
 
+function toggleApps(e) {
+    const homePageSection = document.querySelector(".homepage");
+    const chatBotSection = document.querySelector(".chatbotapp");
+    const imageappSection = document.querySelector(".imageapp");
+    const audioappSection =document.querySelector(".audioapp");
+    switch (this.value) {
+        case 'chatty':
+            chatBotSection.style.display = "block"
+            homePageSection.style.display = "none"
+            break;
+        case 'mega':
+            homePageSection.style.display = "none";
+            imageappSection.style.display = "block";
+            break;
+        case 'hermes':
+            homePageSection.style.display = "none";
+            audioappSection.style.display = "block"
+            break;
+
+        default:
+            homePageSection.style.display = "block"
+            break;
+    }
+}
+
+function returnToHomePage() {
+    location.reload();
+}
 
 document.addEventListener('DOMContentLoaded', (e) => {
     //display
     const chatBotSection = document.querySelector(".chatbotapp");
     chatBotSection.style.display = "none"
     const homePageSection = document.querySelector(".homepage");
-    homePageSection.style.display = "none"
+    homePageSection.style.display = "block"
     const imageappSection = document.querySelector(".imageapp");
     imageappSection.style.display = "none"
-    
+    const audioappSection =document.querySelector(".audioapp");
+    audioappSection.style.display = "none"
     //app elements
     const sendBtn = document.querySelector('#sendbtn');
     const imageBtn = document.querySelector('#imagebtn');
     const audiouploadform = document.querySelector('#audiouploadform');
+    const buttons = document.querySelectorAll('.btn-md')
+    const logos =document.querySelectorAll('img')
     // events
     sendBtn.addEventListener('click', handleChat);
     imageBtn.addEventListener('click', handleImage);
     audiouploadform.addEventListener('submit', receiveUserAudio)
+    buttons.forEach(button => {
+        button.addEventListener('click', toggleApps)
+    })
+    logos.forEach(logo => {
+        logo.addEventListener('click', returnToHomePage)
+    })
 
 })
 
