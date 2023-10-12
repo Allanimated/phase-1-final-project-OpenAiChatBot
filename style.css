@@ -1,5 +1,6 @@
 body {
     background-color: #f7f9fb;
+    height: 100vh;
 }
 
 header {
@@ -28,14 +29,13 @@ div.home {
 .navbar img {
     height: 60px;
     width: 60px;
-    border-color: orange;
     border-radius: 50%;
     cursor: pointer;
 }
 
 .row {
     display: flex;
-    height: 88%;
+    height: 90%;
     align-items: center;
 }
 
@@ -89,18 +89,24 @@ h2 {
 
 h4 {
     font-family: 'Young Serif', serif;
-    color: #FFCC00;
+    color: whitesmoke;
 
 }
 
 p.slogan {
-    color: #FAF5E9;
+    color:#FFFFFF;
     font-family: sans-serif;
     font-size: 20px;
     font-weight: bold;
     font-style: italic;
+    margin-top: 0%;
 }
 
+hr {
+    border-style: solid;
+    border-color: white;
+    margin-top: 8%;
+}
 
 .chatbox {
     flex: 1; 
@@ -199,4 +205,60 @@ section.audioapp {
     background-position: center;
     background-size: cover;
     height: 100vh;
+}
+
+.bubbles img {
+    width: 30px;
+    animation: bubble 7s linear infinite;
+}
+
+.bubbles {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    position: fixed;
+    bottom: -50px;
+}
+
+@keyframes bubble {
+    0% {
+        transform: translateY(-70px);
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    70% {
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(-80vh);
+        opacity: 0;
+    }  
+}
+
+.bubbles img:nth-child(1){
+    animation-delay: 5s;
+    width: 45px;
+}
+.bubbles img:nth-child(2){
+    animation-delay: 0.5s;
+}
+.bubbles img:nth-child(3){
+    animation-delay: 16s;
+    width: 20px;
+}
+.bubbles img:nth-child(4){
+    animation-delay: 15s;
+}.bubbles img:nth-child(5){
+    animation-delay: 12s;
+    width: 20px;
+}
+.bubbles img:nth-child(6){
+    animation-delay: 6s;
+    width: 50px;
+}
+.bubbles img:nth-child(7){
+    animation-delay: 9s;
 }
