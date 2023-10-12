@@ -3,24 +3,110 @@ body {
 }
 
 header {
-    background-color:#2b7a78;
+    background-color: rgba(0,0,0,0.2);
+}
+
+/*Home page styling*/
+div.home {
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(rgba(0,0,0,0.2),rgba(0,0,0,0.2)),url(images/benjamin-davies-21jDy_yt008-unsplash.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding-left: 8%;
+    padding-right: 8%;
+    box-sizing: border-box;
+}
+
+.navbar {
+    height: 10%;
+    display: flex;
+    padding: 15px;
+}
+
+.navbar img {
+    height: 60px;
+    width: 60px;
+    border-color: orange;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.row {
+    display: flex;
+    height: 88%;
+    align-items: center;
+}
+
+.col {
+    flex-basis: 50%;
+}
+
+div.homecards {
+    width: 200px;
+    height: 230px;
+    display: inline-block;
+    border-radius: 10px;
+    padding: 15px 25px;
+    box-sizing: border-box;
+    cursor: pointer;
+    margin: 10px 15px;
+    text-align: center;
+    
+}
+
+.chatty {
+    background-image: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)),url(images/akhil-yerabati-cbRuQDMNr4E-unsplash.jpg);
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+}
+.mega {
+    background-image:linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)),url(images/alfred-kenneally-hft66-cCMh8-unsplash.jpg);
+    background-position: center;
+    background-size: cover;
+
+}
+.hermes{
+    background-image: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)),url(images/domino-BMest61rcqs-unsplash.jpg);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    left: 120px;
+}
+
+h1 {
+    font-family: 'Young Serif', serif;
+    color: #FFCC00;
+    font-size: 80px;
 }
 
 h2 {
-    color: #17252a;
-    text-align: center;
+    color: #FFCC00;
+    font-family: 'Young Serif', serif;
 }
 
-.chatbotapp {
-    height: 100vh; /* Make the chatbotapp take up the full height of the viewport */
-    display: flex;
-    flex-direction: column;
+h4 {
+    font-family: 'Young Serif', serif;
+    color: #FFCC00;
+
 }
+
+p.slogan {
+    color: #FAF5E9;
+    font-family: sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+    font-style: italic;
+}
+
 
 .chatbox {
-    flex: 1; /* Allow the chatbox to expand and fill available space */
-    overflow-y: auto; /* Enable vertical scrolling for the chatbox */
+    flex: 1; 
+    overflow-y: auto; 
     padding: 10px;
+    height: 80vh;
 }
 .botmessage {
     background-color: #def2f1;
@@ -33,7 +119,7 @@ h2 {
     margin-top: 10px;
 }
 .usermessage {
-    background-color: #3aafa9;
+    background-color: rgba(255, 204, 0, 0.8);
     width: 98%;
     margin-left: 10px;
     height: fit-content;
@@ -52,7 +138,7 @@ h2 {
     padding: 15px;
     flex-direction: row;
     column-gap: 10px;
-    background-color:#2b7a78;
+    background-color: rgba(255, 204, 0, 0.2);
 }
 
 
@@ -77,6 +163,9 @@ div.card {
     width: 400px;
     height: fit-content;
     padding: 10px;
+    margin-top: 3%;
+    font-family: 'Young Serif', serif;
+    color: #2b7a78;
 }
 
 div.audio {
@@ -90,4 +179,24 @@ div.audio {
     text-align: center;
     padding: 15px;
     border-color: #2b7a78;
+}
+
+section.chatbotapp {
+    background-image: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)),url(images/akhil-yerabati-cbRuQDMNr4E-unsplash.jpg);
+    background-position: center;
+    background-size: cover;
+    height: 110vh;
+}
+
+section.imageapp {
+    background-image:linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)),url(images/alfred-kenneally-hft66-cCMh8-unsplash.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+section.audioapp {
+    background-image: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)),url(images/domino-BMest61rcqs-unsplash.jpg);
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
 }
