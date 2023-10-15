@@ -20,6 +20,10 @@ To get the app started you need to create an API key via the OpenAI platform and
 const API_KEY variable.
 After that, you can run the html file on your browser to use the application
 
+## github pages
+
+* https://allanimated.github.io/phase-1-final-project-OpenAiChatBot/chatpage.html
+
 ## Built With
 
 * [JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript) - The programming language used.
